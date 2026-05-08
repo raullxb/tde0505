@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Cliente {
     private String nome;
@@ -9,10 +8,10 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(Date dataNasc, String cpf, String nome) {
-        this.dataNasc = dataNasc;
-        this.cpf = cpf;
+    public Cliente(String nome, String cpf, LocalDate dataNasc) {
         this.nome = nome;
+        this.cpf = cpf;
+        this.dataNasc = dataNasc;
     }
 
     public String getNome() {
@@ -31,11 +30,11 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public Date getDataNasc() {
+    public LocalDate getDataNasc() {
         return dataNasc;
     }
 
-    public void setDataNasc(Date dataNasc) {
+    public void setDataNasc(LocalDate dataNasc) {
         this.dataNasc = dataNasc;
     }
 

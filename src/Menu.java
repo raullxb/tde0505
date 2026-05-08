@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
 
 public class Menu {
 
@@ -41,8 +42,9 @@ public class Menu {
     public void adicionarCliente(ArrayList<Cliente> clientes) {
         String nome = IO.readln("Qual o nome do cliente: ");
         String cpf = IO.readln("Qual o CPF do cliente: ");
-        String dataFormat = IO.readln("Data de Nascimento: ");
-        LocalDate dataNasc = LocalDate.parse(dataFormat);
+        String dataFormat = IO.readln("Data de Nascimento(dd/mm/aaaa): ");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate dataNasc = LocalDate.parse(dataFormat, formatter);
 
 
 
