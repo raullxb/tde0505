@@ -1,9 +1,11 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Cliente {
     private String nome;
     private String cpf;
     private LocalDate dataNasc;
+    private ArrayList<Endereco> enderecos = new ArrayList<>();
 
     public Cliente() {
     }
@@ -12,6 +14,10 @@ public class Cliente {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNasc = dataNasc;
+    }
+
+    public ArrayList<Endereco> getEnderecos() {
+        return enderecos;
     }
 
     public String getNome() {
@@ -44,6 +50,7 @@ public class Cliente {
                 "nome='" + nome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", dataNasc=" + dataNasc +
+                ", enderecos=" + enderecos + // Agora imprime a lista completa
                 '}';
     }
 }

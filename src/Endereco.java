@@ -2,18 +2,15 @@ public class Endereco {
     private String logradouro;
     private String bairro;
     private String cidade;
-    private Double cep;
-    private String descrincao;
+    private String cep;
+    private String descricao;
 
-    public Endereco() {
-    }
-
-    public Endereco(String logradouro, String bairro, String cidade, Double cep, String descrincao) {
+    public Endereco(String logradouro, String bairro, String cidade, String cep, String descricao) {
         this.logradouro = logradouro;
         this.bairro = bairro;
         this.cidade = cidade;
         this.cep = cep;
-        this.descrincao = descrincao;
+        this.descricao = descricao;
     }
 
     public String getLogradouro() {
@@ -40,20 +37,20 @@ public class Endereco {
         this.cidade = cidade;
     }
 
-    public Double getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(Double cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
-    public String getDescrincao() {
-        return descrincao;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescrincao(String descrincao) {
-        this.descrincao = descrincao;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     @Override
@@ -62,8 +59,8 @@ public class Endereco {
                 "logradouro='" + logradouro + '\'' +
                 ", bairro='" + bairro + '\'' +
                 ", cidade='" + cidade + '\'' +
-                ", cep=" + cep +
-                ", descrincao='" + descrincao + '\'' +
+                ", cep='" + cep + '\'' +
+                ", descricao='" + descricao + '\'' +
                 '}';
     }
 }
